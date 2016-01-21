@@ -9,6 +9,10 @@ get '/user' do
   "the user this application is running as is #{ENV['USER']}"
 end
 
+get '/whoami' do
+  "the output of whoami: #{`whoami`}.chomp"
+end
+
 get '/agent' do
   "you're using #{request.user_agent}"
 end

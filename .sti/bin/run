@@ -14,6 +14,7 @@ echo "cisco_db:x:${USER_ID}:${GROUP_ID}:Cisco DB User:${HOME}:/bin/bash" >> "$HO
 export LD_PRELOAD=libnss_wrapper.so
 export NSS_WRAPPER_PASSWD=${HOME}/passwd
 export NSS_WRAPPER_GROUP=/etc/group
+export USER=$(whoami)
 
 export RACK_ENV=${RACK_ENV:-"production"}
 
