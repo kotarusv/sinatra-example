@@ -14,8 +14,6 @@ function rake_assets_precompile() {
 
 set -e
 
-yum install -y nss_wrapper
-
 export RACK_ENV=${RACK_ENV:-"production"}
 
 echo "---> Installing application source ..."
