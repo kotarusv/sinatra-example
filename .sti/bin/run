@@ -9,7 +9,7 @@ set -e
 
 export USER_ID=$(id -u)
 export GROUP_ID=$(id -g)
-grep -v ^cisco_db /etc/passwd > "$HOME/passwd"
+grep -v ^default /etc/passwd > "$HOME/passwd"
 echo "cisco_db:x:${USER_ID}:${GROUP_ID}:Cisco DB User:${HOME}:/bin/bash" >> "$HOME/passwd"
 export LD_PRELOAD=libnss_wrapper.so
 export NSS_WRAPPER_PASSWD=${HOME}/passwd
